@@ -25,5 +25,12 @@
   
   .content {
     text-align: center;
+    width: 100%;
   }
-  
+  .left, .right {
+    width: 50%; /* Explicitly set each side to take up half of the parent's width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
