@@ -12,6 +12,8 @@ import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { GoogleLogin } from '@react-oauth/google';
+import { Redirect } from 'react-router-dom';
 
 function Copyright(props) {
   return (
@@ -107,6 +109,15 @@ export default function SignInSide() {
               >
                 Sign In
               </Button>
+              <GoogleLogin
+                onSuccess={credentialResponse => {
+                    console.log(credentialResponse);
+                    // return <Redirect to="/" />;
+                }}
+                onError={() => {
+                    console.log('Login Failed');
+                }}
+                />
               <Grid container>
                 <Grid item xs>
                   <Link href="#" variant="body2">

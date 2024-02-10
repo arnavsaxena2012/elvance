@@ -9,8 +9,9 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false)
   const [email, setEmail] = useState("")
 
+  // let client = require('~/client_secret.json');
   return (
-    <GoogleOAuthProvider clientId="<your_client_id>">
+    <GoogleOAuthProvider clientId= "970850734399-gb219lo9k7e42f8oqmnnbggfm5du6qjk.apps.googleusercontent.com">
       <div className="App">
         <BrowserRouter>
           <Routes>
